@@ -1,0 +1,182 @@
+<ataques>
+  <ataque>
+    <nombre>Espeon</nombre>
+    <a_nombre>Cabezazo Zen</a_nombre>
+  </ataque>
+  <ataque>
+    <nombre>Espeon</nombre>
+    <a_nombre>Premonicion</a_nombre>
+  </ataque>
+  <ataque>
+    <nombre>Gyarados</nombre>
+    <a_nombre>Mordisco</a_nombre>
+  </ataque>
+  <ataque>
+    <nombre>Gyarados</nombre>
+    <a_nombre>Enfado</a_nombre>
+  </ataque>
+  <ataque>
+    <nombre>Aggron</nombre>
+    <a_nombre>Cola Dragon</a_nombre>
+  </ataque>
+  <ataque>
+    <nombre>Arcanine</nombre>
+    <a_nombre>Alarido</a_nombre>
+  </ataque>
+  <ataque>
+    <nombre>Flareon</nombre>
+    <a_nombre>Ascuas</a_nombre>
+  </ataque>
+  <ataque>
+    <nombre>Vaporeon</nombre>
+    <a_nombre>Hidrobomba</a_nombre>
+  </ataque>
+  <ataque>
+    <nombre>Magneton</nombre>
+    <a_nombre>Rayo Carga</a_nombre>
+  </ataque>
+  <ataque>
+    <nombre>Magneton</nombre>
+    <a_nombre>Retribucion</a_nombre>
+  </ataque>
+  <ataque>
+    <nombre>Hariyama</nombre>
+    <a_nombre>Avalancha</a_nombre>
+  </ataque>
+  <ataque>
+    <nombre>Skamory</nombre>
+    <a_nombre>Tajo Aereo</a_nombre>
+  </ataque>
+  <ataque>
+    <nombre>Digglet</nombre>
+    <a_nombre>Lanzarrocas</a_nombre>
+  </ataque>
+  <ataque>
+    <nombre>Digglet</nombre>
+    <a_nombre>Avalancha</a_nombre>
+  </ataque>
+  <ataque>
+    <nombre>Slugma</nombre>
+    <a_nombre>Lanzarrocas</a_nombre>
+  </ataque>
+  <ataque>
+    <nombre>Slugma</nombre>
+    <a_nombre>Avalancha</a_nombre>
+  </ataque>
+  <ataque>
+    <nombre>Trapinch</nombre>
+    <a_nombre>Avalancha</a_nombre>
+  </ataque>
+  <ataque>
+    <nombre>Trapinch</nombre>
+    <a_nombre>Hidrobomba</a_nombre>
+  </ataque>
+  <ataque>
+    <nombre>Taillow</nombre>
+    <a_nombre>Ataque Rapido</a_nombre>
+  </ataque>
+  <ataque>
+    <nombre>Taillow</nombre>
+    <a_nombre>Golpe Aereo</a_nombre>
+  </ataque>
+  <ataque>
+    <nombre>Darumaka</nombre>
+    <a_nombre>Colmillo Igneo</a_nombre>
+  </ataque>
+  <ataque>
+    <nombre>Darumaka</nombre>
+    <a_nombre>Nitrocarga</a_nombre>
+  </ataque>
+  <ataque>
+    <nombre>Rufflet</nombre>
+    <a_nombre>Ataque ala</a_nombre>
+  </ataque>
+  <ataque>
+    <nombre>Rufflet</nombre>
+    <a_nombre>Avalancha</a_nombre>
+  </ataque>
+  <ataque>
+    <nombre>Gligar</nombre>
+    <a_nombre>Rapido Ataque</a_nombre>
+  </ataque>
+  <ataque>
+    <nombre>Gligar</nombre>
+    <a_nombre>Golpe Aereo</a_nombre>
+  </ataque>
+  <ataque>
+    <nombre>Ditto</nombre>
+    <a_nombre>Transformacion</a_nombre>
+  </ataque>
+  <ataque>
+    <nombre>Ditto</nombre>
+    <a_nombre>Combate</a_nombre>
+  </ataque>
+  <ataque>
+    <nombre>Fletchling</nombre>
+    <a_nombre>Picotazo</a_nombre>
+  </ataque>
+  <ataque>
+    <nombre>Fletchling</nombre>
+    <a_nombre>Onda Ignea</a_nombre>
+  </ataque>
+  <ataque>
+    <nombre>Snubbull</nombre>
+    <a_nombre>Mordisco</a_nombre>
+  </ataque>
+  <ataque>
+    <nombre>Rattata</nombre>
+    <a_nombre>Ataque Rapido</a_nombre>
+  </ataque>
+  <ataque>
+    <nombre>Rattata</nombre>
+    <a_nombre>Bola Sombra</a_nombre>
+  </ataque>
+  <ataque>
+    <nombre>Fomantis</nombre>
+    <a_nombre>Rapido Ataque</a_nombre>
+  </ataque>
+  <ataque>
+    <nombre>Fomantis</nombre>
+    <a_nombre>Corte Furia</a_nombre>
+  </ataque>
+  <ataque>
+    <nombre>Fomantis</nombre>
+    <a_nombre>Energibola</a_nombre>
+  </ataque>
+  <ataque>
+    <nombre>Petilil</nombre>
+    <a_nombre>Ataque Rapido</a_nombre>
+  </ataque>
+  <ataque>
+    <nombre>Petilil</nombre>
+    <a_nombre>Poder Oculto</a_nombre>
+  </ataque>
+  <ataque>
+    <nombre>Petilil</nombre>
+    <a_nombre>Energibola</a_nombre>
+  </ataque>
+  <ataque>
+    <nombre>Chikorita</nombre>
+    <a_nombre>Placaje</a_nombre>
+  </ataque>
+  <ataque>
+    <nombre>Chikorita</nombre>
+    <a_nombre>Poder Oculto</a_nombre>
+  </ataque>
+  <ataque>
+    <nombre>Chikorita</nombre>
+    <a_nombre>Energibola</a_nombre>
+  </ataque>
+  <ataque>
+    <nombre>Magikarp</nombre>
+    <a_nombre>Ataque Lento</a_nombre>
+  </ataque>
+  <ataque>
+    <nombre>Yungoos</nombre>
+    <a_nombre>Rapido Ataque</a_nombre>
+  </ataque>
+  <ataque>
+    <nombre>Hitmonchan</nombre>
+    <a_nombre>Ataque Rapido</a_nombre>
+  </ataque>
+</ataques>

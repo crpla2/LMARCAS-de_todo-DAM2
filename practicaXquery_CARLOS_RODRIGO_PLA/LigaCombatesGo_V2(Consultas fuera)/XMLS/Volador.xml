@@ -1,0 +1,40 @@
+<CopaVolador>
+  <pokemon f_captura="2017">
+    <nombre>Gligar</nombre>
+    <ataque>
+      <a_nombre>Rapido Ataque</a_nombre>
+      <potencia>8</potencia>
+    </ataque>
+    <ataque>
+      <a_nombre>Golpe Aereo</a_nombre>
+      <potencia>70</potencia>
+    </ataque>
+    <tipo>Tierra</tipo>
+    <tipo>Volador</tipo>
+    <pc>901</pc>
+  </pokemon>
+  <pokemon f_captura="2019">
+    <nombre>Rufflet</nombre>
+    <ataque>
+      <a_nombre>Ataque ala</a_nombre>
+      <potencia>8</potencia>
+    </ataque>
+    <ataque>
+      <a_nombre>Avalancha</a_nombre>
+      <potencia>70</potencia>
+    </ataque>
+    <tipo>Normal</tipo>
+    <tipo>Volador</tipo>
+    <pc>810</pc>
+  </pokemon>
+  <pokemon f_captura="2022">
+    <nombre>Skamory</nombre>
+    <ataque>
+      <a_nombre>Tajo Aereo</a_nombre>
+      <potencia>14</potencia>
+    </ataque>
+    <tipo>Acero</tipo>
+    <tipo>Volador</tipo>
+    <pc>748</pc>
+  </pokemon>
+</CopaVolador>

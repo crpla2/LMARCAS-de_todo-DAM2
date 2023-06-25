@@ -1,0 +1,227 @@
+<ataques>
+  <ataque>
+    <nombre>Espeon</nombre>
+    <a_nombre>Cabezazo Zen</a_nombre>
+    <potencia>12</potencia>
+  </ataque>
+  <ataque>
+    <nombre>Espeon</nombre>
+    <a_nombre>Premonicion</a_nombre>
+    <potencia>120</potencia>
+  </ataque>
+  <ataque>
+    <nombre>Gyarados</nombre>
+    <a_nombre>Mordisco</a_nombre>
+    <potencia>6</potencia>
+  </ataque>
+  <ataque>
+    <nombre>Gyarados</nombre>
+    <a_nombre>Enfado</a_nombre>
+    <potencia>110</potencia>
+  </ataque>
+  <ataque>
+    <nombre>Aggron</nombre>
+    <a_nombre>Cola Dragon</a_nombre>
+    <potencia>15</potencia>
+  </ataque>
+  <ataque>
+    <nombre>Arcanine</nombre>
+    <a_nombre>Alarido</a_nombre>
+    <potencia>12</potencia>
+  </ataque>
+  <ataque>
+    <nombre>Flareon</nombre>
+    <a_nombre>Ascuas</a_nombre>
+    <potencia>10</potencia>
+  </ataque>
+  <ataque>
+    <nombre>Vaporeon</nombre>
+    <a_nombre>Hidrobomba</a_nombre>
+    <potencia>130</potencia>
+  </ataque>
+  <ataque>
+    <nombre>Magneton</nombre>
+    <a_nombre>Rayo Carga</a_nombre>
+    <potencia>8</potencia>
+  </ataque>
+  <ataque>
+    <nombre>Magneton</nombre>
+    <a_nombre>Retribucion</a_nombre>
+    <potencia>35</potencia>
+  </ataque>
+  <ataque>
+    <nombre>Hariyama</nombre>
+    <a_nombre>Avalancha</a_nombre>
+    <potencia>14</potencia>
+  </ataque>
+  <ataque>
+    <nombre>Skamory</nombre>
+    <a_nombre>Tajo Aereo</a_nombre>
+    <potencia>14</potencia>
+  </ataque>
+  <ataque>
+    <nombre>Digglet</nombre>
+    <a_nombre>Lanzarrocas</a_nombre>
+    <potencia>12</potencia>
+  </ataque>
+  <ataque>
+    <nombre>Digglet</nombre>
+    <a_nombre>Avalancha</a_nombre>
+    <potencia>80</potencia>
+  </ataque>
+  <ataque>
+    <nombre>Slugma</nombre>
+    <a_nombre>Lanzarrocas</a_nombre>
+    <potencia>12</potencia>
+  </ataque>
+  <ataque>
+    <nombre>Slugma</nombre>
+    <a_nombre>Avalancha</a_nombre>
+    <potencia>80</potencia>
+  </ataque>
+  <ataque>
+    <nombre>Trapinch</nombre>
+    <a_nombre>Avalancha</a_nombre>
+    <potencia>14</potencia>
+  </ataque>
+  <ataque>
+    <nombre>Trapinch</nombre>
+    <a_nombre>Hidrobomba</a_nombre>
+    <potencia>130</potencia>
+  </ataque>
+  <ataque>
+    <nombre>Taillow</nombre>
+    <a_nombre>Ataque Rapido</a_nombre>
+    <potencia>8</potencia>
+  </ataque>
+  <ataque>
+    <nombre>Taillow</nombre>
+    <a_nombre>Golpe Aereo</a_nombre>
+    <potencia>55</potencia>
+  </ataque>
+  <ataque>
+    <nombre>Darumaka</nombre>
+    <a_nombre>Colmillo Igneo</a_nombre>
+    <potencia>12</potencia>
+  </ataque>
+  <ataque>
+    <nombre>Darumaka</nombre>
+    <a_nombre>Nitrocarga</a_nombre>
+    <potencia>70</potencia>
+  </ataque>
+  <ataque>
+    <nombre>Rufflet</nombre>
+    <a_nombre>Ataque ala</a_nombre>
+    <potencia>8</potencia>
+  </ataque>
+  <ataque>
+    <nombre>Rufflet</nombre>
+    <a_nombre>Avalancha</a_nombre>
+    <potencia>70</potencia>
+  </ataque>
+  <ataque>
+    <nombre>Gligar</nombre>
+    <a_nombre>Rapido Ataque</a_nombre>
+    <potencia>8</potencia>
+  </ataque>
+  <ataque>
+    <nombre>Gligar</nombre>
+    <a_nombre>Golpe Aereo</a_nombre>
+    <potencia>70</potencia>
+  </ataque>
+  <ataque>
+    <nombre>Ditto</nombre>
+    <a_nombre>Transformacion</a_nombre>
+    <potencia>0</potencia>
+  </ataque>
+  <ataque>
+    <nombre>Ditto</nombre>
+    <a_nombre>Combate</a_nombre>
+    <potencia>35</potencia>
+  </ataque>
+  <ataque>
+    <nombre>Fletchling</nombre>
+    <a_nombre>Picotazo</a_nombre>
+    <potencia>10</potencia>
+  </ataque>
+  <ataque>
+    <nombre>Fletchling</nombre>
+    <a_nombre>Onda Ignea</a_nombre>
+    <potencia>95</potencia>
+  </ataque>
+  <ataque>
+    <nombre>Snubbull</nombre>
+    <a_nombre>Mordisco</a_nombre>
+    <potencia>6</potencia>
+  </ataque>
+  <ataque>
+    <nombre>Rattata</nombre>
+    <a_nombre>Ataque Rapido</a_nombre>
+    <potencia>8</potencia>
+  </ataque>
+  <ataque>
+    <nombre>Rattata</nombre>
+    <a_nombre>Bola Sombra</a_nombre>
+    <potencia>100</potencia>
+  </ataque>
+  <ataque>
+    <nombre>Fomantis</nombre>
+    <a_nombre>Rapido Ataque</a_nombre>
+    <potencia>8</potencia>
+  </ataque>
+  <ataque>
+    <nombre>Fomantis</nombre>
+    <a_nombre>Corte Furia</a_nombre>
+    <potencia>3</potencia>
+  </ataque>
+  <ataque>
+    <nombre>Fomantis</nombre>
+    <a_nombre>Energibola</a_nombre>
+    <potencia>90</potencia>
+  </ataque>
+  <ataque>
+    <nombre>Petilil</nombre>
+    <a_nombre>Ataque Rapido</a_nombre>
+    <potencia>8</potencia>
+  </ataque>
+  <ataque>
+    <nombre>Petilil</nombre>
+    <a_nombre>Poder Oculto</a_nombre>
+    <potencia>15</potencia>
+  </ataque>
+  <ataque>
+    <nombre>Petilil</nombre>
+    <a_nombre>Energibola</a_nombre>
+    <potencia>90</potencia>
+  </ataque>
+  <ataque>
+    <nombre>Chikorita</nombre>
+    <a_nombre>Placaje</a_nombre>
+    <potencia>5</potencia>
+  </ataque>
+  <ataque>
+    <nombre>Chikorita</nombre>
+    <a_nombre>Poder Oculto</a_nombre>
+    <potencia>15</potencia>
+  </ataque>
+  <ataque>
+    <nombre>Chikorita</nombre>
+    <a_nombre>Energibola</a_nombre>
+    <potencia>90</potencia>
+  </ataque>
+  <ataque>
+    <nombre>Magikarp</nombre>
+    <a_nombre>Ataque Lento</a_nombre>
+    <potencia>5</potencia>
+  </ataque>
+  <ataque>
+    <nombre>Yungoos</nombre>
+    <a_nombre>Rapido Ataque</a_nombre>
+    <potencia>5</potencia>
+  </ataque>
+  <ataque>
+    <nombre>Hitmonchan</nombre>
+    <a_nombre>Ataque Rapido</a_nombre>
+    <potencia>5</potencia>
+  </ataque>
+</ataques>

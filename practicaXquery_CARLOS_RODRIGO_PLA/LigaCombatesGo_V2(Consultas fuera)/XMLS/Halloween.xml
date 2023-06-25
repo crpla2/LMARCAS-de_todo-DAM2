@@ -1,0 +1,25 @@
+<CopaHalloween>
+  <pokemon f_captura="2022">
+    <nombre>Rattata</nombre>
+    <ataque>
+      <a_nombre>Ataque Rapido</a_nombre>
+      <potencia>8</potencia>
+    </ataque>
+    <ataque>
+      <a_nombre>Bola Sombra</a_nombre>
+      <potencia>100</potencia>
+    </ataque>
+    <tipo>Siniestro</tipo>
+    <tipo>Normal</tipo>
+    <pc>461</pc>
+  </pokemon>
+  <pokemon f_captura="2020">
+    <nombre>Snubbull</nombre>
+    <ataque>
+      <a_nombre>Mordisco</a_nombre>
+      <potencia>6</potencia>
+    </ataque>
+    <tipo>Hada</tipo>
+    <pc>297</pc>
+  </pokemon>
+</CopaHalloween>

@@ -1,0 +1,375 @@
+Ejercicio 1:
+(: Consulta que devuelve todo el documento :)
+doc("pokemon")
+
+Ejercicio 2:
+(: Consulta que devuelve todos los pokemon cuyos pc es de 3046 :)
+doc("pokemon")
+/pokedex/pokemon[pc=3046]
+
+Ejercicio 3:
+(: Consulta que devuelve todos los pokemon capturados antes de 2019 :)
+doc("pokemon")/pokedex/pokemon[f_captura<2019]/nombre/text()
+
+Ejercicio 4:
+(: Consulta que devuelve los nombres de los pokemon 
+que tengan más de dos ataques ordenados por su nombre :)
+for $pok in doc("pokemon")/pokedex/pokemon
+where count ($pok/ataque)>1
+order by $pok/nombre
+return $pok/nombre/text()
+
+Ejercicio 5:
+(: Consulta que SIN utilizar ninguna consulta FLOWR devuelve el nombre de los pokemon :)
+doc("pokemon")//pokemon/nombre/text()
+
+Ejercicio 6:
+(: Consulta que SIN utilizar ninguna consulta FLOWR devuelve los nombres 
+de los pokemon cuyo ataque sea Avalancha:)
+doc("pokemon")
+//pokemon[.//a_nombre='Avalancha']/nombre/text()
+
+Ejercicio 7:
+(: Ejercicio 7 Consulta que devuelve los nombres de los pokemon que tienen un ataque llamado "Avalancha" ordenados alfabéticamente :)
+for $pok in doc("pokemon")//pokemon
+where $pok//a_nombre='Avalancha'
+order by $pok/nombre 
+return $pok/nombre/text()
+
+Ejercicio 8:
+(: Ejercicio 8. Consulta que devuelve los nombres de los pokemon qu sean de tiop Fuego capturados antes de 2021 :)
+for $pok in doc("pokemon")//pokemon
+where $pok/@f_captura<2021 and $pok/tipo="Fuego"
+order by $pok/nombre
+return $pok/nombre/text()
+
+Ejercicio 9:
+(:Ejercicio 9. Consulta que devuelve de cada pokemon un elemento llamado pokemon que contiene el nombre junto con el numero de ataques que tiene con el siguiente aspecto 
+<pokemon>
+  <nombre>asdfasd</nombre>
+  <num_pokemon>3</num_pokemon>
+</pokemon>:)
+for $pok in doc("pokemon")//pokemon
+return
+<pokemon>
+{
+  $pok/nombre,
+  <num_ataques>
+  {
+    count($pok/ataque)
+  }
+  </num_ataques>
+}</pokemon>
+
+Ejercicio 10:
+(:Ejercicico 10. Consulta que devuelve losn ombres de todos los pokemon en el archivo pokemon.xml y todos los comentarios de cada pokemon contenidos en el archivo descripcion.xml:)
+for $pok in doc("pokemon")//pokemon
+return
+<pokemonEntero>
+{
+  $pok/nombre,
+  doc("descripcion")//entrada[./nombre=$pok/nombre]/comentario
+}</pokemonEntero>
+
+Ejercicio 11:
+(: Ejercicio 11. Consulta que devuelve el nombre de cada uno de los pokemon del archivo y su número de ataques, pero solo de aquellos pokemon que tienen un número de ataques distinto de 1:)
+for $pok in doc("pokemon")//pokemon
+where count($pok/ataque)!=1
+return
+<pokemon>
+{
+  $pok/nombre,
+  <num_ataques>
+  {
+    count($pok/ataque)
+  }
+  </num_ataques>
+}</pokemon>
+
+Ejercicio 12:
+(: ejercicio 12. Consulta que devuelve los nombres de los pokemon de tipo Fuego capturados después de 2020 con el siguiente formato
+<mipokedex>
+  <pokemon>
+    <nombre>Charmander</nombre>
+    <capturado>2030</capturado>
+  </pokemon>
+</mipokedex>:)
+<mipokedex>
+{
+  for $pok in doc("pokemon")//pokemon
+  where $pok/tipo="Fuego" and $pok/@f_captura>2020
+  return
+  <pokemon>
+   {
+     $pok/nombre,
+     <capturado>{string($pok/@f_captura)}</capturado>
+   }
+  </pokemon>
+}
+</mipokedex>
+
+Ejercicio 13:
+(: Ejercicio 13. Consulta que devuelve todo los nombres de lso pokemon de tipo Fuego capturados después de 2020 con el siguiente formato de salida
+<mipokedex>
+  <pokemon capturado="2030">
+    <nombre>Charmander</nombre>
+  </pokemon>
+</mipokedex>:)
+<mipokedex>
+{
+  for $pok in doc ("pokemon")//pokemon
+  where $pok/tipo="Fuego" and $pok/@f_captura>2020
+  return 
+  <pokemon capturado="{$pok/@f_captura}">
+  {
+    $pok/nombre
+  }
+  </pokemon>
+}</mipokedex>
+
+Ejercicio 14:
+(:ejer 14 calcula el pc medio de los pokemon de cada tipo con el formato de salida
+<mipokedex>
+  <tipo>
+    <nombre>Fuego</nombre>
+    <pc_medio>33</pc_medio>
+  </tipo>
+</mipokedex>:)
+
+for $type in distinct-values(doc("pokemon")//tipo)
+
+return
+ <tipo>
+ {
+   
+   <nombre>{$type}</nombre>,
+   <pc_medio>{avg(doc("pokemon")//pokemon[tipo=$type]/pc)}</pc_medio>
+ }
+ </tipo>
+
+Ejercicio 14_1:
+(:ejer 14 calcula el pc medio de los pokemon de cada tipo con el formato de salida
+<mipokedex>
+  <tipo>
+    <nombre>Fuego</nombre>
+    <pc_medio>33</pc_medio>
+  </tipo>
+</mipokedex>:)
+
+for $type in doc("pokemon")//tipo
+group by $t:=$type/text()
+return
+ <tipo>
+ {
+   <nombre>{$t}</nombre>,
+   <pc_medio>{avg(doc("pokemon")//pokemon[tipo=$type]/pc)}</pc_medio>
+ }
+ </tipo>
+
+Ejercicio 15:
+(: Consulta que devuelve los nombres y las descripciones de los pokemon que figuran a la vez en el fichero pokemon.xml y descripcion.xml :)
+for $pok in doc("pokemon")//pokemon, $desc in doc("descripcion")//entrada
+where $pok/nombre=$desc/nombre
+return
+<pokemonDescrito>
+{
+  $pok/nombre,
+  $desc/comentario
+}
+</pokemonDescrito>
+
+Ejercicio 16:
+(: Ejercicio 16 Consulta que devuelve el nombre y el pc de los 3 primeros pokemon con el siguiente formato de salida (nº orden. nombre - PC):)
+<mipokedex>
+{
+  for $i in (1 to 3)
+  return
+  <pokemon>
+  {
+    concat($i, ". "),
+    doc("pokemon")//pokemon[$i]/nombre/text(),
+    " - ",
+    doc("pokemon")//pokemon[$i]/pc/text()
+  }
+  </pokemon>
+}
+</mipokedex>
+
+Ejercicio 17:
+(: ejer 17 :)
+
+for $pok at $i in doc("pokemon")//pokemon
+return
+<pok>
+  {
+    concat($i," ", $pok/nombre)
+  }
+</pok>
+
+Ejercicio 17_2:
+(: ejer 17:)
+for $pok  in doc("pokemon")//pokemon
+let $ata:= count($pok/ataque)
+return
+<pok>
+{
+  concat($ata, ". ", $pok/nombre/text())
+}</pok>
+
+Ejercicio 18:
+(: ejer 18:)
+if (some $pok in doc("pokemon")//pokemon
+satisfies (count($pok/ataque)>2))
+then
+  doc("pokemon")
+else 
+ ()
+
+Ejercicio 18_2:
+(: Ejer 18 Consulta que devuelve los nombres de los pokemon que tienen dos ataques si existe algun pokemon que tenga más de 2:)
+if (some $pok in doc("pokemon")//pokemon
+satisfies (count($pok/ataque)>2))
+then (: Devuelve los pokemon con 2 ataques:)
+  (for $pok  in doc("pokemon")//pokemon
+let $ata:= count($pok/ataque)
+return
+<pok>
+{
+  concat($ata, ". ", $pok/nombre/text())
+}</pok>)
+else 
+ ()
+
+Ejercicio 19:
+(: ejercicio 19 Consulta que devuevle los nombres de los pokemons si existe alguno del año 2020:)
+if (some $pok in doc("pokemon")//pokemon
+satisfies ($pok/[@f_captura]=2020))
+then (: Devuelve los pokemon con 2 ataques:)
+  (for $pok  in doc("pokemon")//pokemon
+let $ata:= count($pok/ataque)
+return
+<pok>
+{
+  concat($ata, ". ", $pok/nombre/text())
+}</pok>)
+else 
+ ()
+
+Ejercicio 20:
+(: ejercicio 20 Consulta que devuelve todos lso nombres de los poqkemon en los que al menos uno de sus tipos sea Fuego:)
+(:
+for $pok in doc("pokemon")//pokemon
+where $pok/tipo="Fuego"
+return $pok/nombre/text()
+:)
+
+for $pok in doc("pokemon")
+where (some $a in $pok satisfies $a/tipo="Fuego")
+return
+
+ $pok/nombre/text()
+
+Ejercicio 21:
+(: ejercicio 21 Consulta que devuelve todos lso nombres de los poqkemon en los que al menos uno de sus tipos sea Fuego:)
+
+for $pok in doc("pokemon")//pokemon
+where $pok/tipo="Fuego"
+return $pok/nombre/text()
+
+Ejercicio 21_2:
+(: Ejercicio 21.  Consulta que devuelve los nombres de los pokemon en los que 
+al menos uno de sus ataques es "Avalancha" :)
+
+for $pok in doc("pokemon")//pokemon
+
+
+where $pok/ataque/a_nombre="Avalancha"
+
+return
+$pok
+
+Ejercicio 22:
+(:Ejercicio 22. Consulta que devuelve todos los nombres de los pokemons en los 
+que todos sus ataques sean Avalancha:)
+
+for $pok in doc("pokemon")//pokemon
+
+where every $p in $pok/ataque satisfies $p/a_nombre="Avalancha"
+
+return
+$pok/nombre
+
+Ejercicio 23:
+(: Ejercicio 23. Consulta que devuelve los nombres de los pokemon que tengan 
+las palabras "Rapido" y "Ataque" en el mismo ataque. Si el pokemon tiene más de 
+un ataque solo es necesario que aparezca en al menos uno de ellos:)
+
+for $pok in doc("pokemon")//pokemon
+let $ata:=$pok/ataque/a_nombre
+(:
+where contains($pok/ataque/a_nombre/text(), "Ataque")
+:)
+
+
+where some $p in $pok/ataque satisfies (contains($p/a_nombre,"Rapido")and contains($p/a_nombre, "Ataque"))
+
+return
+<aa>{$pok/nombre}</aa>
+
+Ejercicio 24:
+(: Ejercicio 24: Consulta que devuelve el nombre de todos los pokemon y sus
+dos primeros ataques. En el caso de que existan más de dos ataques para un pokemon, se añade un tercer ataque con contenido "y otros" :)
+
+for $pok in doc("pokemon")//pokemon
+return
+  <pok>
+  {
+    $pok/nombre,
+    $pok/ataque[1]/a_nombre,
+    $pok/ataque[2]/a_nombre,
+    if (count($pok/ataque)>2)
+    then
+      <a_nombre>{"y otros"}</a_nombre>
+    else
+      ()
+  }
+  </pok>
+
+Ejercicio 25:
+(: Ejercicio 25 Consulta que devuelve los nobmres de los pokemon con la identificación en el nombre de elemento <decada_actual> o <decada_pasada> según la década en la que se capturaron :)
+<pokedex>
+{
+  for $pok in doc("pokemon")//pokemon
+  
+  return 
+  if ($pok/@f_captura<2020)
+  then
+    <decada_pasada>{
+    $pok/nombre/text()
+    }</decada_pasada>
+    else
+     <decada_actual>{
+    $pok/nombre/text()
+    }</decada_actual>
+   
+}
+</pokedex>
+
+Ejercicio 26:
+(: Ejercicio 26: Consulta que crea una tabla HTML con los nombres de 
+todos los pokemon:)
+<html>
+{
+  <head>
+  
+    <title>Mis superPokemon</title>
+  
+  </head>,
+  <body>
+  
+    <p style="color:red">{for $pok in doc("pokemon")//pokemon
+                            return concat($pok/nombre/text(), ", ")}</p>
+  
+  </body>
+}
+</html>

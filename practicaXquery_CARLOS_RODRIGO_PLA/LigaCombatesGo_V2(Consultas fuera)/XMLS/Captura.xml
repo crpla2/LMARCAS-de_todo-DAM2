@@ -1,0 +1,43 @@
+<CopaCaptura>
+  <pokemon f_captura="2022">
+    <nombre>Skamory</nombre>
+    <ataque>
+      <a_nombre>Tajo Aereo</a_nombre>
+      <potencia>14</potencia>
+    </ataque>
+    <tipo>Acero</tipo>
+    <tipo>Volador</tipo>
+    <pc>748</pc>
+  </pokemon>
+  <pokemon f_captura="2022">
+    <nombre>Rattata</nombre>
+    <ataque>
+      <a_nombre>Ataque Rapido</a_nombre>
+      <potencia>8</potencia>
+    </ataque>
+    <ataque>
+      <a_nombre>Bola Sombra</a_nombre>
+      <potencia>100</potencia>
+    </ataque>
+    <tipo>Siniestro</tipo>
+    <tipo>Normal</tipo>
+    <pc>461</pc>
+  </pokemon>
+  <pokemon f_captura="2022">
+    <nombre>Chikorita</nombre>
+    <ataque>
+      <a_nombre>Placaje</a_nombre>
+      <potencia>5</potencia>
+    </ataque>
+    <ataque>
+      <a_nombre>Poder Oculto</a_nombre>
+      <potencia>15</potencia>
+    </ataque>
+    <ataque>
+      <a_nombre>Energibola</a_nombre>
+      <potencia>90</potencia>
+    </ataque>
+    <tipo>Planta</tipo>
+    <pc>391</pc>
+  </pokemon>
+</CopaCaptura>

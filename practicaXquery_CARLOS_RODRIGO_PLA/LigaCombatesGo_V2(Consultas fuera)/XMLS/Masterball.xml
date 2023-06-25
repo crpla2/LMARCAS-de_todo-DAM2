@@ -1,0 +1,38 @@
+<LigaMasterBall>
+  <pokemon f_captura="2019">
+    <nombre>Espeon</nombre>
+    <ataque>
+      <a_nombre>Cabezazo Zen</a_nombre>
+      <potencia>12</potencia>
+    </ataque>
+    <ataque>
+      <a_nombre>Premonicion</a_nombre>
+      <potencia>120</potencia>
+    </ataque>
+    <tipo>Psiquico</tipo>
+    <pc>3046</pc>
+  </pokemon>
+  <pokemon f_captura="2018">
+    <nombre>Gyarados</nombre>
+    <ataque>
+      <a_nombre>Mordisco</a_nombre>
+      <potencia>6</potencia>
+    </ataque>
+    <ataque>
+      <a_nombre>Enfado</a_nombre>
+      <potencia>110</potencia>
+    </ataque>
+    <tipo>Agua</tipo>
+    <tipo>Volador</tipo>
+    <pc>3001</pc>
+  </pokemon>
+  <pokemon f_captura="2020">
+    <nombre>Flareon</nombre>
+    <ataque>
+      <a_nombre>Ascuas</a_nombre>
+      <potencia>10</potencia>
+    </ataque>
+    <tipo>Fuego</tipo>
+    <pc>2623</pc>
+  </pokemon>
+</LigaMasterBall>

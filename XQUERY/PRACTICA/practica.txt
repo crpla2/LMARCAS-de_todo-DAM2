@@ -1,0 +1,7 @@
+Nueva versión!!!
+* Vamos a asumir que en la copa captura, solo se pueden utilizar los pokemon capturados en 2022 y con un PC máximo de 1500
+* En el documento de pokemon con el que hemos estado utilizando, puede que no haya pokemon suficientes para seleccionar 3 pokemon que satisfagan las condiciones de las ligas/copas, estoy preparando un nuevo fichero con más pokemon, aunque seguirá la misma estructura.
+
+Con la realización correcta de esta práctica se podrán dar por superados los siguientes criterios de evaluación: RA6a, RA6c, RA6h, RA6i
+
+* RA6a, RA6c y RA6h son mínimos

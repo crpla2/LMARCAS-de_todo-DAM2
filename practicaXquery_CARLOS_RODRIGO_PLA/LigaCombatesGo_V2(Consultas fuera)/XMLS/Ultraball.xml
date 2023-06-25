@@ -1,0 +1,38 @@
+<LigaUltraBall>
+  <pokemon f_captura="2021">
+    <nombre>Magneton</nombre>
+    <ataque>
+      <a_nombre>Rayo Carga</a_nombre>
+      <potencia>8</potencia>
+    </ataque>
+    <ataque>
+      <a_nombre>Retribucion</a_nombre>
+      <potencia>35</potencia>
+    </ataque>
+    <tipo>Electrico</tipo>
+    <pc>2159</pc>
+  </pokemon>
+  <pokemon f_captura="2022">
+    <nombre>Hitmonchan</nombre>
+    <ataque>
+      <a_nombre>Ataque Rapido</a_nombre>
+      <potencia>5</potencia>
+    </ataque>
+    <tipo>Lucha</tipo>
+    <pc>1684</pc>
+  </pokemon>
+  <pokemon f_captura="2017">
+    <nombre>Gligar</nombre>
+    <ataque>
+      <a_nombre>Rapido Ataque</a_nombre>
+      <potencia>8</potencia>
+    </ataque>
+    <ataque>
+      <a_nombre>Golpe Aereo</a_nombre>
+      <potencia>70</potencia>
+    </ataque>
+    <tipo>Tierra</tipo>
+    <tipo>Volador</tipo>
+    <pc>901</pc>
+  </pokemon>
+</LigaUltraBall>

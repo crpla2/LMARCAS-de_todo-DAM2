@@ -1,0 +1,38 @@
+<LigaSuperBall>
+  <pokemon f_captura="2018">
+    <nombre>Hariyama</nombre>
+    <ataque>
+      <a_nombre>Avalancha</a_nombre>
+      <potencia>14</potencia>
+    </ataque>
+    <tipo>Lucha</tipo>
+    <pc>1054</pc>
+  </pokemon>
+  <pokemon f_captura="2017">
+    <nombre>Gligar</nombre>
+    <ataque>
+      <a_nombre>Rapido Ataque</a_nombre>
+      <potencia>8</potencia>
+    </ataque>
+    <ataque>
+      <a_nombre>Golpe Aereo</a_nombre>
+      <potencia>70</potencia>
+    </ataque>
+    <tipo>Tierra</tipo>
+    <tipo>Volador</tipo>
+    <pc>901</pc>
+  </pokemon>
+  <pokemon f_captura="2018">
+    <nombre>Darumaka</nombre>
+    <ataque>
+      <a_nombre>Colmillo Igneo</a_nombre>
+      <potencia>12</potencia>
+    </ataque>
+    <ataque>
+      <a_nombre>Nitrocarga</a_nombre>
+      <potencia>70</potencia>
+    </ataque>
+    <tipo>Fuego</tipo>
+    <pc>779</pc>
+  </pokemon>
+</LigaSuperBall>

@@ -1,0 +1,62 @@
+Ejercicio 1:
+(:Ejercicio 1. Muestra el nombre de todos los pokemon y su pc aumentado en 10 unidades.:)
+(: Funcion de aumento:)
+declare function local:aumento($cantidad as xs:double, $porcentaje as xs:decimal) as xs:double
+{
+  let $respuesta := $cantidad+($porcentaje)
+  return $respuesta
+};
+
+(:Expresión XQuery:)
+for $pok in doc("pokemon")//pokemon
+let $porc := local:aumento(number($pok/pc), 50)
+return
+<pokemon>{
+$pok/nombre,
+<pcAumentado>{$porc}</pcAumentado>
+}</pokemon>
+
+Ejercicio 2:
+(: Ejercicio 2: Mediante "at" devuelve la posicion de cada pokemon como un atributo como muestra el ejemplo:
+<pokemon pos=1>Bulbasaur</pokemon>
+<pokemon pos=2>Charmander</pokemon>:)
+
+for $pok at $i in doc("pokemon")//pokemon
+return <pokemon pos="{$i}"> {$pok/nombre/text()}</pokemon>
+
+Ejercicio 3:
+(:Ejercicio 3. Inserción de un nuevo pokemon:)
+insert node
+<pokemon f_captura="2022">
+  <nombre>Buenary</nombre>
+  <ataque>
+    <a_nombre>Destructor</a_nombre>
+    <potencia>7</potencia>
+  </ataque>
+  <ataque>
+    <a_nombre>Rapidez</a_nombre>
+    <potencia>60</potencia>
+  </ataque>
+  <tipo>Normal</tipo>
+  <pc>772</pc>
+</pokemon>
+
+before doc("pokemon")/pokedex/pokemon[1]
+
+Ejercicio 4: 
+(: Ejercicio 4. Reemplaza valor del pc del pokemon Buenary:)
+replace value of node doc("pokemon")//pokemon[1]/pc with 227
+
+Ejercicio 5:
+(: Ejercicio 5: reemplaza el nodo completo del primer ataque con los siguientes 
+datos: a_nombre= Ataque Rapido potencia=8 :)
+
+replace node doc("pokemon")//pokemon[1]/ataque[1] with 
+<ataque>
+  <a_nombre>Ataque Rapido</a_nombre>
+  <potencia>8</potencia>
+</ataque>
+
+Ejercicio 6:
+(: Ejercicio 6.  Elimina el pokemon de la base de datos:)
+delete node doc("pokemon")//pokemon[1]

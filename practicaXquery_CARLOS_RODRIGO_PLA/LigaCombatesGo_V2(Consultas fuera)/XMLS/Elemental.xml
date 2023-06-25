@@ -1,0 +1,41 @@
+<CopaElemental>
+  <pokemon f_captura="2021">
+    <nombre>Fomantis</nombre>
+    <ataque>
+      <a_nombre>Rapido Ataque</a_nombre>
+      <potencia>8</potencia>
+    </ataque>
+    <ataque>
+      <a_nombre>Corte Furia</a_nombre>
+      <potencia>3</potencia>
+    </ataque>
+    <ataque>
+      <a_nombre>Energibola</a_nombre>
+      <potencia>90</potencia>
+    </ataque>
+    <tipo>Planta</tipo>
+    <pc>461</pc>
+  </pokemon>
+  <pokemon f_captura="2022">
+    <nombre>Digglet</nombre>
+    <ataque>
+      <a_nombre>Lanzarrocas</a_nombre>
+      <potencia>12</potencia>
+    </ataque>
+    <ataque>
+      <a_nombre>Avalancha</a_nombre>
+      <potencia>80</potencia>
+    </ataque>
+    <tipo>Fuego</tipo>
+    <pc>279</pc>
+  </pokemon>
+  <pokemon f_captura="2019">
+    <nombre>Magikarp</nombre>
+    <ataque>
+      <a_nombre>Ataque Lento</a_nombre>
+      <potencia>5</potencia>
+    </ataque>
+    <tipo>Agua</tipo>
+    <pc>29</pc>
+  </pokemon>
+</CopaElemental>
