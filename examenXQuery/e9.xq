@@ -1,0 +1,1 @@
+doc("libros")//libro[precio/data()>40]

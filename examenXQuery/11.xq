@@ -1,0 +1,1 @@
+doc("libros")/bib/libro/titulo[../autor/apellido="Stevens"]/text()
