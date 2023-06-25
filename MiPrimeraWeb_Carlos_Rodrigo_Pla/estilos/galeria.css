@@ -1,0 +1,14 @@
+.imagen {
+    width:100px;
+    height: 100px;
+    transition: width 3s, height 5s;
+  }
+  
+  .imagen:hover {
+    width:500px;
+    height: 500px;
+  }
+article section{font-size: 20px;}
+#postres{margin: auto;}
+.espacio{width: 50px;}
+img{border-radius: 25px;}

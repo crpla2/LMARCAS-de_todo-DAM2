@@ -1,0 +1,53 @@
+body{
+    background-color: grey;
+}
+.grid-container {
+    display: grid;
+    grid-template-areas:
+        'header header  header  header  header  header'
+        'nav    main    main    main    main    aside'
+        'footer footer  footer  footer  footer  footer';
+    grid-gap: 10px;
+    background-color: #90959900;
+    padding:2%;
+    margin: 1px;
+
+  }   
+  .item1 { grid-area: header; 
+            background-color: blue;
+}
+  .item2 { grid-area: nav; 
+            background-color: red;
+            border:5px double black;
+}
+  .item3 { grid-area: main;
+            background-color: yellow;
+            padding:10px;
+}
+  .item4 { grid-area: aside;
+            background-color: green;
+}
+  .item5 { grid-area: footer; 
+            background-color: pink;
+               
+}
+.item1,.item2,.item4,.item5,section{
+    text-align: center;
+    padding:10px;
+}
+section > p{
+    text-decoration: underline;
+}
+  .flex-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;}
+.item{
+    background-color: powderblue;
+    margin: 5%;
+    height: 25%;
+       
+}
+@media only screen and (min-width:720px) and (max-width:1204px) {
+body{background-color: white;}
+}

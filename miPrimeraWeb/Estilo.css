@@ -1,0 +1,114 @@
+* {
+  box-sizing: border-box;
+}
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}   
+[class*="col-"] {
+  float: left;
+  padding: 15px;
+}   
+ 
+body{
+  background-image: url("./imagenes/mesaHarina.PNG");
+  background-repeat: repeat;
+  background-position: left top;
+}
+.header {
+  background-image: url("./imagenes/header2.jfif");
+  width: 85%;
+  margin-top: 0%;
+  margin-bottom: 0%;
+  margin-left:auto ;
+  margin-right: auto;
+  top: 0px;
+  position: relative;
+
+  border-radius: 25px;
+  font-size: 45px;
+  font-family: 'Brush Script MT', cursive;
+  text-align: center;
+  color:snow;
+}
+.nav{
+  background-image: url("./imagenes/menu1.jpg");
+  border-radius: 25px;
+
+}
+ul {
+  font-size: 25px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  text-align: center;
+  list-style-type: none;
+  margin: 2px;
+  padding: 2px;
+  position: relative;
+  overflow: auto;
+ 
+}
+  li a {
+    display: block;
+    color: black;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+  li a.active {
+    background-color: #aa5404;
+    color: rgb(15, 8, 8);
+}
+  li a:hover:not(.active) {
+    background-color: rgb(218, 215, 81);
+    color: rgb(15, 11, 11);
+}
+p, h2{
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  text-align: justify;
+}
+
+.icono{
+  border-radius:25px;
+  width: 100px;
+  height: 100px;
+}
+  /* movil */
+[class*="col-"] {
+    width: 100%;
+}
+@media only screen and (min-width: 768px) {
+    /* tableta */
+  .col-s-1 {width: 8.33%;}
+  .col-s-2 {width: 16.66%;}
+  .col-s-3 {width: 25%;}
+  .col-s-4 {width: 33.33%;}
+  .col-s-5 {width: 41.66%;}
+  .col-s-6 {width: 50%;}
+  .col-s-7 {width: 58.33%;}
+  .col-s-8 {width: 66.66%;}
+  .col-s-9 {width: 75%;}
+  .col-s-10 {width: 83.33%;}
+  .col-s-11 {width: 91.66%;}
+  .col-s-12 {width: 100%;}
+  .header{font-size:70px}
+  ul {font-size: 20px;}
+}
+@media only screen and (min-width:1204px) {
+    /* ordenador */
+  .col-1 {width: 8.33%;}
+  .col-2 {width: 16.66%;}
+  .col-3 {width: 25%;}
+  .col-4 {width: 33.33%;}
+  .col-5 {width: 41.66%;}
+  .col-6 {width: 50%;}
+  .col-7 {width: 58.33%;}
+  .col-8 {width: 66.66%;}
+  .col-9 {width: 75%;}
+  .col-10 {width: 83.33%;}
+  .col-11 {width: 91.66%;}
+  .col-12 {width: 100%;}
+  .header{font-size:90px;}
+  ul {font-size: 25px;}
+  
+}
+

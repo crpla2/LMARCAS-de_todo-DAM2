@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Masamadre</title>
+    <link rel="stylesheet" type="text/css" href="../estilos/estilo.css">
+</head>
+<body>
+    <div class="grid-container">
+        <header class="item1">
+            <table>
+                <tr>
+                    <td>MasaMadre &nbsp;</td>
+                    <td><img  class="logo"src="../imagenes/Sin título.png"></a></td>
+                </tr>
+            </table>
+        </header>
+        <nav class="item2">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="recetas.html">Recetas</a></li>
+                    <li><a class="active" href="#participa">Participa</a></li>
+                    <li><a href="galeria.html">Galería</a></li>
+                    
+                </ul>
+        </nav>
+        <main class="item3">
+            <section>
+                <h1>CONCURSO</h1>
+                <P>Participa en nuestro concurso de recetas en el que elegiremos el mejor pan casero de 2021 y podras optar a conseguir una maravillosa amasadora orbital semiprofesional de la marca Ketchup </P>
+                <p>Si tienes esa receta secreta de la abuela que nunca te has decidido a compartir, no lo dudes y envíanosla, pordrias ser uno de los ganadores y optar a nuestro magnífico premio.</p>
+                <p>Si decides participar rellena el formulario que aparece a continuación. </p>
+                <p>BUENA SUERTE.</p>
+            </section>
+            <hr>
+            <article>
+                <h1>Envia tu receta</h1>
+                <form>
+                    <label for="nombre">Nombre</label><br>
+                    <input type="text" name="nombre" size="5" placeholder="Pepe"><br>
+            
+                    <label for="apellidos">Apellidos</label><br>
+                    <input type="text" name="apellidos" size="10" placeholder="Pepito Pepote"><br>
+
+                    <label for="email">Email</label><br>
+                    <input type="email" name="email" size="15" placeholder="correo@correo.com"><br>
+            
+                    <label for="titulo">Título receta</label><br>
+                    <input type="text" name="titulo" size="15"><br>
+            
+                    <label for="fermento">Fermento</label><br>
+                    <input type="radio" name="fermento" value="Masa Madre"checked>Masa Madre<br>
+                    <input type="radio" name="fermento" value="Levadura" >Levadura<br>
+                                        <input type="radio" name="fermento" value="Mixto">Mixto<br>
+            
+                    <label for="archivo">Incluir  foto</label><br>
+                    <input type="file" name="archivo" /><br>
+                                           
+                    <label for="harinas">Harinas</label><br>
+                    <select name="harinas" multiple>
+                        <option value="integral"selected>Integral de trigo</option>
+                        <option value="blanca">Blanca de trigo</option>
+                        <option value="integralCenteno">Integral de Centeno</option>
+                        <option value="blancaCenteno">Blanca de Centeno</option>
+                        <option value="Kamut">Kamut</option>
+                    </select><br>
+                    <label for="elaboracion">Elaboración</label><br>
+                    <textarea type="text" name="elaboracion" rows="10" cols="40" placeholder="Describe aqui tu elaboración"></textarea><br>
+
+                    <input type="checkbox" name="novedades" value="Novedades">Suscribirme al boletín de novedadaes<br>
+                    <input type="submit" value="Enviar">
+                    <input type="reset" value="Borrar datos" />
+                  
+                </form>
+           
+                
+            </article>
+
+        </main>
+        <aside class="item4">
+            <div class="flex-container"><h1>Noticias</h1>
+            <iframe class=noticia id="A" src="https://pandecalidad.com/jose-roldan-nuevo-capitan-de-la-seleccion-espanola-de-panaderia-artesana"></iframe>
+            <iframe class=noticia id="B"src="https://pandecalidad.com/cual-es-el-origen-del-sandwich-y-por-que-es-tan-importante-para-el-crecimiento-de-los-mas-pequenos"></iframe>
+            <iframe class=noticia id="C"src="https://pandecalidad.com/listado-de-los-finalistas-de-la-ruta-del-buen-pan-de-canarias-2020-2021"></iframe>
+            </div>
+        </aside>
+        <footer class="item5">
+            <div class="social">
+                <table >
+                    <tr>  
+                        <td><a href="https://es-es.facebook.com/"><img class="icono" src="../imagenes/facebook.png" alt="facebook"></a></td>
+                        <td><a href="https://www.youtube.com/"><img class="icono" src="../imagenes/descarga (1).png" alt="youtube"></a></td>
+                        <td><a href="https://es.linkedin.com/"><img class="icono" src="../imagenes/descarga.png" alt="linkedin"></a></td>
+                        <td><a href="https://www.instagram.com/?hl=es"><img class="icono" src="../imagenes/instagram.jfif" alt="instagram"></a></td>
+                    </tr>  
+                </table>
+            </div>
+        </footer>
+    </div>
+
+</body>
+</html>

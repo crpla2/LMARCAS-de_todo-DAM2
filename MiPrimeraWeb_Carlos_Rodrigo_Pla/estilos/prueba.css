@@ -1,0 +1,51 @@
+body{margin: 10px;
+    background-color: dodgerblue;
+    }
+
+
+.grid-container{
+
+    display: grid;
+
+    padding: 10px;
+
+    align-content: center;
+    background-color: blanchedalmond;
+    grid-gap: 10px;
+    
+}
+.item1,.item2,.item3,.item4,.item5{
+    padding: 10px;
+  
+}
+.item4{grid-column:1 /span 4 ;
+    grid-row:1 ;
+background-color: blue;}
+.item5{grid-column:3/ span 3 ;
+    grid-row:5 ;}
+.item1{
+    grid-column: 2/span 2;
+    grid-row: 2/ span 3;
+    background-color: chartreuse;
+}
+.item2{
+    grid-column:1 ;
+    grid-row:2/span 3 ;
+    background-color: chocolate;
+}
+.item3{
+    grid-column:4 ;
+    grid-row:2/span 3 ;
+    background-color: crimson;
+}
+.flex-container{
+    display: flex;
+    flex-direction: column;
+    size: 100%;
+}
+.flex1,.flex2{
+    height: 50%;
+    background-color: darksalmon;
+    margin: 5px;
+
+}

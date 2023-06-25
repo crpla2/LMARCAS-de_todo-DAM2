@@ -1,0 +1,83 @@
+<!ENTITY en "Inglés">
+<!ENTITY de "Aleman">
+<!ENTITY it "Italiano">
+<!ENTITY fr "Francés">
+<!ELEMENT cv (datosPersonales,datosContacto,datosContactoAdicional?,
+formacion,idiomas,experienciaProfesional,competenciasSP,datosAdicionales)>
+<!ELEMENT datosPersonales (nombre,apellidos,fechaNac,lugarNac,nacionalidades,
+(nif|nie))>
+<!ATTLIST datosPersonales foto CDATA #REQUIRED>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT apellidos (#PCDATA)>
+<!ELEMENT fechaNac (dia,mes,anyo)>
+<!ELEMENT dia (#PCDATA)>
+<!ELEMENT mes (#PCDATA)>
+<!ELEMENT anyo (#PCDATA)>
+<!ELEMENT lugarNac (#PCDATA)>
+<!ELEMENT nacionalidades (nacionalidad)+>
+<!ELEMENT nacionalidad (#PCDATA)>
+<!ELEMENT nif (#PCDATA)> 
+<!ELEMENT nie (#PCDATA)>
+<!ELEMENT datosContacto (calle,numero?,portal?,escalera?,piso?,puerta?,cp,pais,email,
+movil,telfs)>
+<!ELEMENT calle (#PCDATA)>
+<!ATTLIST calle tipoVia (Plaza|Calle|Avenida) #REQUIRED>
+<!ELEMENT numero (#PCDATA)>
+<!ELEMENT portal (#PCDATA)>
+<!ELEMENT escalera (#PCDATA)>
+<!ELEMENT piso (#PCDATA)>
+<!ELEMENT puerta (#PCDATA)>
+<!ELEMENT cp (#PCDATA)>
+<!ELEMENT pais (#PCDATA)>
+<!ELEMENT email (#PCDATA)>
+<!ELEMENT movil (#PCDATA)>
+<!ELEMENT telfs (telf)*>
+<!ELEMENT telf (#PCDATA)>
+<!ELEMENT datosContactoAdicional (web,linkedin,facebook)>
+<!ELEMENT web (#PCDATA)>
+<!ELEMENT linkedin (#PCDATA)>
+<!ELEMENT facebook EMPTY>
+<!ELEMENT formacion (estudio)+>
+<!ELEMENT estudio (nombre,lugar,fechaInicio,fechaFin)>
+<!ATTLIST estudio nivel (basico|medio|superior) #REQUIRED>
+<!ELEMENT lugar (#PCDATA)>
+<!ELEMENT fechaInicio (dia,mes,anyo)>
+<!ELEMENT fechaFin (dia,mes,anyo)>
+<!ELEMENT idiomas (idioma)*>
+<!ELEMENT idioma (nombre,organismo)>
+<!ATTLIST idioma nivel (bajo|medio|alto) "medio" >
+<!ATTLIST idioma materno CDATA #FIXED "no" >
+<!ELEMENT organismo (#PCDATA)>
+<!ATTLIST organismo oficial (si) #REQUIRED>
+<!ELEMENT experienciaProfesional (experiencia)*>
+<!ELEMENT experiencia (empresa,puesto?,fechaInicio,fechaFin)>
+<!ELEMENT empresa (#PCDATA)>
+<!ELEMENT puesto (#PCDATA)>
+<!ELEMENT competenciasSP (competencia+)>
+<!ELEMENT competencia (desc)>
+<!ATTLIST competencia tipo (liderazgo|trabajoenequipo|iniciativa) #REQUIRED>
+<!ATTLIST competencia nivel (1|2|3|4|5) #IMPLIED>
+<!ELEMENT desc (#PCDATA)>
+<!ELEMENT datosAdicionales (aficiones,disponibilidadViajar,vehiculo,licencias)>
+<!ELEMENT aficiones (aficion)*>
+<!ELEMENT aficion (#PCDATA)>
+<!ELEMENT disponibilidadViajar (#PCDATA)>
+<!ELEMENT vehiculo (#PCDATA)>
+<!ELEMENT licencias (licencia)*>
+<!ELEMENT licencia (#PCDATA)>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

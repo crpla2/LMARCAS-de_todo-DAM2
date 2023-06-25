@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<xs:annotation>
+  <xs:appinfo>Este esquema ha sido realizado por Carlos Rosdrigo Pla</xs:appinfo>
+  <xs:appinfo>Encuesta sobre el viaje</xs:appinfo>
+  <xs:documentation xml:lang="es">
+  Este esquema define un xml para la realización de encuestas con el objetivo de conocer la opinión 
+  de los alumnos sobre un viaje realizado.
+  </xs:documentation>
+</xs:annotation>
+    <xs:element name="resultados_encuesta">
+        <xs:annotation>
+            <xs:documentation>Se pueden almacenar tantas encuestas como sean necesarias.</xs:documentation>
+        </xs:annotation>
+       <xs:complexType>
+           <xs:sequence>
+               <xs:element name="encuesta"  minOccurs="0" maxOccurs="unbounded">               
+                   <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="datosAlumno">
+                                <xs:annotation>
+                                    <xs:documentation>Datos personales del alumno</xs:documentation>
+                                </xs:annotation>                              
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="nombre" type="xs:string"/>
+                                        <xs:element name="apellidos" type="xs:string"/>
+                                    </xs:sequence>
+                                    <xs:attribute name="num" use="required">
+                                        <xs:annotation>
+                                            <xs:documentation>Numero de identificacion del alumno en el centro.</xs:documentation>
+                                        </xs:annotation>
+                                        <xs:simpleType>
+                                            <xs:restriction base="xs:integer">
+                                                <xs:totalDigits value="6"/>
+                                            </xs:restriction>
+                                        </xs:simpleType>
+                                    </xs:attribute>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="organizacion">
+                                <xs:complexType>
+                                    <xs:all>
+                                        <xs:element name="enunciado"  fixed="Valore cada uno de los aspectos de la organización del viaje, siendo 0 nada satisfecho y 5 muy satisfecho">
+                                            <xs:annotation>
+                                                <xs:documentation>Valoración de los aspectos organizativos del viaje</xs:documentation>
+                                            </xs:annotation>
+                                            <xs:complexType>
+                                                <xs:simpleContent>
+                                                    <xs:extension base="xs:string">
+                                                        <xs:attribute name="idioma" use="optional">
+                                                            <xs:annotation>
+                                                                <xs:documentation>Se puede realizar la encuesta en inglés o en castellano.</xs:documentation>
+                                                            </xs:annotation>
+                                                            <xs:simpleType>
+                                                                 <xs:restriction base="xs:string">
+                                                                    <xs:enumeration value="EN"/>
+                                                                    <xs:enumeration value="ES"/>
+                                                                </xs:restriction>
+                                                            </xs:simpleType>
+                                                        </xs:attribute>
+                                                    </xs:extension>
+                                                </xs:simpleContent>
+                                            </xs:complexType>
+                                        </xs:element>
+                                        <xs:element name="viaje">
+                                            <xs:annotation>
+                                                <xs:documentation>Valoración del viaje en general (de 0 a 5).</xs:documentation>
+                                            </xs:annotation>
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:integer">
+                                                    <xs:minInclusive value="0"/>
+                                                    <xs:maxInclusive value="5"/>
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element >
+                                        <xs:element name="visitas">
+                                            <xs:annotation>
+                                                <xs:documentation>Valoración general de las visitas realizadas durante el viaje (de 0 a 5).</xs:documentation>
+                                            </xs:annotation>
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:integer">
+                                                    <xs:minInclusive value="0"/>
+                                                    <xs:maxInclusive value="5"/>
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                        <xs:element name="comida">
+                                            <xs:annotation>
+                                                <xs:documentation>Valoración general de las comidas realizadas durante el viaje (de 0 a 5).</xs:documentation>
+                                            </xs:annotation>
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:integer">
+                                                    <xs:minInclusive value="0"/>
+                                                    <xs:maxInclusive value="5"/>
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                    </xs:all>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="visitasRealizadas">
+                                <xs:annotation>
+                                    <xs:documentation>Valoración de cada visita realizada durante el viaje.</xs:documentation>
+                                </xs:annotation>
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="info" minOccurs="0" type="xs:string" default="·Valore cada uno de los sitios visitados durante el viaje a Barcelona, siendo 0 nada satisfecho y 5 muy satisfecho"/>
+                                        <xs:element name="visita" minOccurs="3" maxOccurs="3">
+                                            <xs:annotation>
+                                                <xs:documentation>Se deben valorar los tres sitios visitados.</xs:documentation>
+                                            </xs:annotation>
+                                            <xs:complexType>
+                                                <xs:simpleContent>
+                                                    <xs:extension base="xxxx">
+                                                        <xs:attribute name="sitio" type="xs:IDREF" use="required"/>
+                                                    </xs:extension>
+                                                </xs:simpleContent>                                               
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="valoracion_general">
+                                <xs:annotation>
+                                    <xs:documentation>Valoración del viaje en general.</xs:documentation>
+                                </xs:annotation>
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:enumeration value="Muy satisfecho"/>
+                                        <xs:enumeration value="Satisfecho"/>
+                                        <xs:enumeration value="Poco satisfecho"/>
+                                        <xs:enumeration value="Nada satisfecho"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="comentario">
+                                <xs:annotation>
+                                    <xs:documentation>
+                                     Espacio para realizar comentarios, se pueder resaltar o colorear partes del texto si se desea.
+                                    </xs:documentation>
+                                </xs:annotation>
+                                <xs:complexType mixed="true" >
+                                    <xs:choice minOccurs="0" maxOccurs="unbounded">
+                                        <xs:element name="colorear">
+                                            <xs:complexType>
+                                                <xs:simpleContent>
+                                                    <xs:extension base="xs:string">
+                                                        <xs:attribute name="color" type="xs:string" default="rojo"/>
+                                                    </xs:extension>
+                                                </xs:simpleContent>
+                                            </xs:complexType>
+                                        </xs:element>
+                                        <xs:element name="resaltar" type="xs:string"/>
+                                    </xs:choice>
+                                </xs:complexType>
+                            </xs:element>
+                       </xs:sequence> 
+                       <xs:attribute name="marca_temporal" type="xs:dateTime" use="required"/>
+                       <xs:attribute name="almacenada_en_bbdd" type="xs:boolean" use="optional" fixed="true"/>               
+                   </xs:complexType>
+               </xs:element>
+               <xs:element name="sitios">
+                <xs:annotation>
+                    <xs:documentation>
+                        Definición de los sitios visitados, tienen un identificador único que identifica cada sitio.
+                    </xs:documentation>
+                </xs:annotation>
+                   <xs:complexType>
+                       <xs:sequence>
+                           <xs:element name="sitio" minOccurs="3" maxOccurs="3">
+                               <xs:complexType>
+                                   <xs:simpleContent>
+                                       <xs:extension base="xs:string">
+                                           <xs:attribute name="id" type="xs:ID" use="required"/>
+                                       </xs:extension>
+                                   </xs:simpleContent>
+                               </xs:complexType>                           
+                           </xs:element>
+                       </xs:sequence>
+                   </xs:complexType>
+               </xs:element>
+               <xs:element name="estadisticas">
+                   <xs:complexType>
+                       <xs:attribute name="puntuacion_media" type="xs:decimal" use="required"/>
+                   </xs:complexType>
+               </xs:element>
+               <xs:element name="localizador">
+                <xs:annotation>
+                    <xs:documentation>
+                        Debe seguir el siguiente formato → tres letras mayúsculas, 
+                        seguido de 1 o más dígitos, seguido de 0 o más letras minúsculas
+                        y debe terminar con la letra A, C o E mayúscula.
+                    </xs:documentation>
+                </xs:annotation>
+                   <xs:simpleType>
+                       <xs:restriction base="xs:string">
+                           <xs:pattern value="[A-Z]{3}[0-9]+[a-z]*[ACE]"></xs:pattern>
+                       </xs:restriction>
+                   </xs:simpleType>
+                </xs:element>
+           </xs:sequence>
+       </xs:complexType>
+    </xs:element>
+    <xs:simpleType name="xxxx">
+        <xs:annotation>
+            <xs:documentation>
+                Define como se valora cada visita en particular (de 0 a 5)
+                Hace referncia a la etiqueta "visita".
+            </xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:integer">
+            <xs:pattern value="[0-5]"/>
+        </xs:restriction>
+    </xs:simpleType>
+</xs:schema>

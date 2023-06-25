@@ -1,0 +1,14 @@
+.receta{
+    text-align:justify ;
+    font-size: 15px;
+    margin:30px;
+    border: 5px;
+}
+img{height: 80%;
+    width: 80%;
+    border-radius: 25px;
+}
+.foca{
+    height: 60%;
+    width: 80%;
+}
